@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class GridPresidentAdapter extends RecyclerView.Adapter<GridPresidentAdapter.GridViewHolder> {
 
     private Context context;
-    private ArrayList<President> listPresident;
+       private ArrayList<President> listPresident;
 
     private ArrayList<President> getListPresident(){
         return listPresident;
@@ -39,7 +39,6 @@ public class GridPresidentAdapter extends RecyclerView.Adapter<GridPresidentAdap
 
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder  holder, int position ) {
-        holder = null;
         Glide.with(context)
                 .load(getListPresident().get(position).getPhoto())
                 .apply(new RequestOptions().override(350,550))
@@ -58,7 +57,7 @@ public class GridPresidentAdapter extends RecyclerView.Adapter<GridPresidentAdap
 
         GridViewHolder( View itemView) {
             super(itemView);
-            imgPhoto = itemView.findViewById(R.id.imgItmPhoto);
+            imgPhoto = itemView.findViewById(R.id.img_item_photo);
         }
     }
 }
